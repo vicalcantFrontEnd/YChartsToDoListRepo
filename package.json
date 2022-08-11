@@ -1,0 +1,27 @@
+{
+  "name": "to-do-list",
+  "version": "0.0.0",
+  "scripts": {
+    "start-mac": "./node_modules/.bin/json-server --watch db.json & (cd to-do-list && ../node_modules/.bin/ng serve)",
+    "start-windows": "start .\\node_modules\\.bin\\json-server --watch db.json & cd to-do-list & start ..\\node_modules\\.bin\\ng serve"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "^14.0.2",
+    "@angular/compiler": "^14.0.2",
+    "@angular/core": "^14.0.2",
+    "@angular/forms": "^14.0.2",
+    "@angular/platform-browser": "^14.0.2",
+    "@angular/platform-browser-dynamic": "^14.0.2",
+    "json-server": "^0.17.0",
+    "rxjs": "~7.5.5",
+    "tslib": "^2.4.0",
+    "zone.js": "~0.11.6"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~14.0.2",
+    "@angular/cli": "^14.0.2",
+    "@angular/compiler-cli": "^14.0.2",
+    "typescript": "4.7.4"
+  }
+}

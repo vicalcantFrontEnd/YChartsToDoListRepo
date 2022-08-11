@@ -1,0 +1,19 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "color": "blue",
+      "make": "Volvo"
+    },
+    {
+      "id": 2,
+      "color": "red",
+      "make": "BMW"
+    },
+    {
+      "id": 3,
+      "color": "black",
+      "make": "Tesla"
+    }
+  ]
+}
