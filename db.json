@@ -1,19 +1,19 @@
 {
-  "cars": [
+  "task": [
     {
       "id": 1,
-      "color": "blue",
-      "make": "Volvo"
+      "name": "define user histories in the database",
+      "complete": false
     },
     {
       "id": 2,
-      "color": "red",
-      "make": "BMW"
+      "name": "create a configuration structure of the application",
+      "complete": false
     },
     {
       "id": 3,
-      "color": "black",
-      "make": "Tesla"
+      "name": "confirm the structure of the application",
+      "complete": false
     }
   ]
 }
