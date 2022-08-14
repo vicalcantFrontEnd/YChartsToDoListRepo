@@ -1,12 +1,15 @@
 <main>
   <div class="container">
     <h1>Victor To-Do List</h1>
-    <div class="error-message">Error deleting “Buy eggs.” Please try again.</div>
+    <div class="error-message" *ngIf="displayMessage == true" && >Error deleting “{{this.taskName}}” Please try again.</div>
+    <div class="error-message" *ngIf="">Missing TaskName, Please try again.</div>
+    <div class="error-message" *ngIf="sizeTaskArray == 0">There are no pending tasks, enjoy your day 😀</div>
     <div class="panel">
       <ul class="list">
         <li class="list-item" *ngFor="let task of taskListData">
           <label class="list-item-label checkbox">
-            <input class="checkbox-input" type="checkbox"><span class="checkbox-indicator"></span><span
+            <input class="checkbox-input" type="checkbox" 
+            (change)="onCheckBoxChange($event)" [value]="task.id"><span class="checkbox-indicator"></span><span
               class="checkbox-description">{{task.name}}</span>
           </label>
           <button class="list-item-action btn" (click)="deleteTask(task.id)">X</button>
