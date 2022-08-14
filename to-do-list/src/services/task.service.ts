@@ -15,4 +15,12 @@ export class TaskService {
     return this.http.get<TaskListI>(`${this.baseUrl}task`);
   }
 
+  addTask(task:any): Observable<TaskListI> {
+    return this.http.post<TaskListI>(`${this.baseUrl}task`, task );
+  }
+
+  deleteTask(id: number): Observable<TaskListI> {
+    return this.http.delete<TaskListI>(`${this.baseUrl}task/${id}`);
+  }
+
 }

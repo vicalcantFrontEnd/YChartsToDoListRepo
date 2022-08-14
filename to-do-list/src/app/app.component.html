@@ -9,13 +9,15 @@
             <input class="checkbox-input" type="checkbox"><span class="checkbox-indicator"></span><span
               class="checkbox-description">{{task.name}}</span>
           </label>
-          <button class="list-item-action btn">X</button>
+          <button class="list-item-action btn" (click)="deleteTask(task.id)">X</button>
         </li>
       </ul>
     </div>
-    <div class="input-group">
-      <input class="form-control" type="text" placeholder="New task">
-      <button class="btn btn-secondary">+</button>
-    </div>
+    <form [formGroup]="taskForm" (submit)="addTask()" autocomplete="off">
+      <div class="input-group">
+        <input class="form-control" type="text" id="name" name="name" placeholder="New task" formControlName="name">
+        <button class="btn btn-secondary" type="submit">+</button>
+      </div>
+    </form>
   </div>
 </main>
