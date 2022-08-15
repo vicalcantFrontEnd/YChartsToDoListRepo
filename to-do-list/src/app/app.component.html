@@ -1,9 +1,8 @@
 <main>
   <div class="container">
     <h1>Victor To-Do List</h1>
-    <div class="error-message" *ngIf="displayMessage == true" && >Error deleting “{{this.taskName}}” Please try again.</div>
-    <div class="error-message" *ngIf="">Missing TaskName, Please try again.</div>
-    <div class="error-message" *ngIf="sizeTaskArray == 0">There are no pending tasks, enjoy your day 😀</div>
+    <div class="error-message" *ngIf="displayMessage == true">Error deleting “{{this.taskName}}” Please try again.</div>
+    <div class="error-message" *ngIf="missingMessage == true">Missing TaskName, Please try again.</div> 
     <div class="panel">
       <ul class="list">
         <li class="list-item" *ngFor="let task of taskListData">

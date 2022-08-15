@@ -10,11 +10,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AppComponent {
     taskForm: FormGroup;
     task: TaskListI;
-    sizeTaskArray:number; 
+    sizeTaskArray: number;
     taskName: any;
     completeTask: boolean = false;
     selectedTask: any;
     displayMessage: boolean = false;
+    missingMessage: boolean = false;
     taskListData: TaskListI[] = [];
 
 
@@ -40,23 +41,29 @@ export class AppComponent {
             });
             this.taskListData = taskArray;
             this.sizeTaskArray = taskArray.length;
-            this.assignTask(this.taskListData[0].name);
+            console.log(this.sizeTaskArray);
+            //this.assignTask(this.taskListData[0].name);
 
         });
     }
 
-    assignTask(task: any) {
-        this.selectedTask = task;
+    addTask() {
+        if (this.taskForm.valid) {
+            this.task = this.taskForm.value;
+            this.taskService.addTask(this.task).subscribe((newTask: TaskListI) => {
+                this.taskListData.push(newTask);
+                this.taskForm.reset();
+            });
+            this.missingMessage = false;
+        } else {
+            this.missingMessage = true;
+        }
+
     }
 
-    addTask() {
-        this.task = this.taskForm.value;
-        this.taskService.addTask(this.task).subscribe((newTask: TaskListI) => {
-            this.taskListData.push(newTask);
-            this.taskForm.reset();
-        }
-        );
-    }
+
+
+
     onCheckBoxChange(event: any) {
         event.target.checked ? this.completeTask = true : this.completeTask = false
     }
