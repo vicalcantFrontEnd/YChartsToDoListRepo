@@ -1,0 +1,173 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>to-do-list documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">to-do-list documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="ycharts-coding-challenge">YCharts Coding Challenge</h1>
+<p>For this coding challenge, you will be implementing a to-do list application using Angular and TypeScript. </p>
+<h1 id="installation--getting-started">Installation / Getting Started</h1>
+<ol>
+<li>Install Node.js and npm from <code>https://nodejs.org/en/download/</code>. It is recommended to have Node.js 12+ and npm 6.14.x</li>
+<li>Enter the directory: <code>cd ycharts_app_interview</code></li>
+<li>Install Node.js packages: <code>npm install</code></li>
+<li>Run the backend and Angular servers:
+macOS: <code>npm run start-mac</code>
+Windows: <code>npm run start-windows</code></li>
+<li>Visit <code>http://localhost:4200/</code> and you should be all set to get started coding! Please note that this setup does
+not work for Internet Explorer.</li>
+<li>If you have any trouble getting our provided configuration up and running please do not hesitate to reach out.</li>
+</ol>
+<h1 id="backend-server">Backend Server</h1>
+<p>We&#39;ve provided a simple backend server, powered by <code>json-server</code>. You can find the official documentation at 
+<code>https://github.com/typicode/json-server</code>. <code>json-server</code> uses the <code>db.json</code> file as a database, which currently contains 
+example data about cars. Try accessing the example data by visiting <code>localhost:3000/cars</code> or <code>localhost:3000/cars/2</code>.</p>
+<p>Since the Angular dev server runs on port 4200, we also set up a <code>proxy.conf.json</code> file that diverts any urls beginning
+with <code>/api</code> to the backend server running on port 3000. To see this in action, try visiting <code>localhost:4200/api/cars</code>.</p>
+<p>You will be responsible for creating a JSON schema that suits the to-do list project. In your project submission,
+please initialize <code>db.json</code> with data that demonstrates the schema you have implemented.</p>
+<h1 id="materials-provided">Materials Provided</h1>
+<p>We have already provided you with many of the materials you will need to get up and running:</p>
+<ul>
+<li>A development server. See the above steps for instructions how to run it. The app will automatically reload 
+ if you change any of the source files.</li>
+<li>Skeleton HTML, which you can find at <code>https://ycharts-interview.netlify.app/</code>. Please inspect element to get an 
+ exact copy of the HTML.</li>
+<li>SCSS, found in <code>src/styles.scss</code>. No changes need to be made to this file</li>
+<li>A basic top level Angular component</li>
+</ul>
+<h1 id="expected-functionality">Expected Functionality</h1>
+<p>Your responsibility is to make this app functional with the following features:</p>
+<ol>
+<li>You should be able to add a new task to the to-do list by typing into the bottom bar, and clicking the blue + 
+button. The new task should appear at the bottom of the to-do list, and it should be unchecked. 
+Empty or white space input should not be accepted.</li>
+<li>You should be able to click the box on the left to check and uncheck each task.</li>
+<li>If a task is checked, you should be able to delete it from the list by clicking its <code>X</code> button on the right.</li>
+<li>If a task is unchecked, attempting to delete it from the list should result in an error. 
+See the example HTML for an example of an error message that should be displayed.</li>
+<li>The error message should remain displayed until any other action is completed
+(i.e. adding a new item, checking or unchecking an item, or deleting an item).</li>
+<li>On page load, the state stored in the backend should be used to initialize the page. Any changes to the state
+should update the backend accordingly. The exception to this is error messages, which should not be stored in 
+the backend.</li>
+</ol>
+<h1 id="other-notes">Other Notes</h1>
+<ul>
+<li>Please make sure to document your code using docstrings and comments.</li>
+<li>Please state any assumptions you are making in the <code>SOLUTION.md</code> file.</li>
+<li>Please feel free to install any additional packages. Just add a note in <code>SOLUTION.md</code> explaining why!</li>
+<li>Unless otherwise specified in the <code>SOLUTION.md</code> file, we will be following the steps in the 
+  <code>Installation / Getting Started</code> section to run your project.</li>
+</ul>
+<h1 id="how-to-submit">How to Submit</h1>
+<ul>
+<li>Please email a ZIP file containing the contents of this directory to the hiring manager who reached out to you.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+
+       <script src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
